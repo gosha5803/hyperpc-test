@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/shared/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/shared/components/ui/card";
 import { Product } from "@/shared/api/Products";
 import { ShoppingCart } from "lucide-react";
 import { FC, useState } from "react";

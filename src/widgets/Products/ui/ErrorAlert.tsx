@@ -1,4 +1,8 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import {
+    Alert,
+    AlertDescription,
+    AlertTitle,
+} from "@/shared/components/ui/alert";
 import { AlertCircle } from "lucide-react";
 import { FC } from "react";
 

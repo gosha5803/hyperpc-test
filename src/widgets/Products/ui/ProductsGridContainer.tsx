@@ -1,11 +1,7 @@
 "use client";
 
 import { useIntersection } from "../model/useIntersection";
-import {
-    ProductCard,
-    ProductsGrid,
-    ProductSkeleton,
-} from "@/app/entites/Product";
+import { ProductCard, ProductsGrid, ProductSkeleton } from "@/entites/Product";
 import { useProductsQuery } from "../model/useProductsQuery";
 import { ErrorAlert } from "./ErrorAlert";
 
