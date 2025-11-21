@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Тестовое задание на вакансию в HYPERPC.
 
-## Getting Started
+В данном nextjs проекте я реализовал минимальный набор требований тестового задания для вакансии, так как если бы шёл на поводу у мыслей: заложить ещё больше основ под мастабирование, добавить анимации, поэксперементировать с дизайном и вёрсткой для адаптива, то это, как по мне, был бы "оверхед" для тестового задания.
 
-First, run the development server:
+Основной реализованный функционал:
+✅ Infinite scroll с использованием Intersection Observer + useInfiniteQuery (tanstack-query)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✅ Типизированные React компоненты
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✅ Адаптивный дизайн
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ Документация компонентов в Storybook (Весь shadcn я документировать не стал взял для примера кнопку, а из своих компонентов документировал только имеющиеся состояния карточки товара)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ Обработка ошибок загрузки изображений
 
-## Learn More
+✅ Отображение состояний первичной загрузки и подгрузки данных в связке с <Skeleton> и (tanstack-query)
 
-To learn more about Next.js, take a look at the following resources:
+Основной стек базовый, для запросов и состояния выбрал tanstack-query, для стилей tailwind, он всё равно с shadcn идёт по-моему в комплекте.
+По архитектуре придерживался примерно формата FSD, хотя без лишних папок, если в одном виджете Products, два хука и один компонент, не считаю нужным сразу плодщит папки UI/Model с одним файлом.
+Отображение ошибки максимально аскетичным сделал.
+Так как задание тестовое нет никаких требований к кешированию, нагрузке на бке, поэтому конфиг react-query оставил дефолтным
+Для апи выбрал json-server, так как публичные фейк апи, почти все очень долго отвечают
+На всякий случай помечу, что я знаю, что такое lazy-loading и другие оптимизации фронтенд приложений, не смотря на то, что здесь я это не сделал, так как проект по сути ничего не содержит все эти оптимизации здесь излишни.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Запуск проекта, для запуска фронта с беком просто введите npm run dev (соответственно у вас должна быть установлена nodejs).
+Для запуска документации ui - npm run storybook.

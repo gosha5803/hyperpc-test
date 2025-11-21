@@ -28,13 +28,16 @@ export const ProductCard: FC<Props> = ({ product }) => {
                     onError={onError}
                 />
             </CardContent>
-            <CardFooter className="p-2 flex flex-col">
-                <h2 className="scroll-m-20 text-lg md:text-2xl font-semibold tracking-tight ">
+            <CardFooter className="p-2 flex flex-col items-baseline">
+                <h2 className="scroll-m-20 text-lg md:text-2xl font-semibold tracking-tight whitespace-nowrap">
                     {product.price + " $"}
                 </h2>
-                <h4 className="text-sm md:text-lg font-semibold">
-                    {product.title}
-                </h4>
+                <div className="w-full overflow-hidden min-w-0">
+                    <h4 className="text-sm md:text-lg font-semibold truncate">
+                        {product.title}
+                    </h4>
+                </div>
+
                 <Button className="w-full mt-2" variant={"default"}>
                     В корзину
                     <ShoppingCart />

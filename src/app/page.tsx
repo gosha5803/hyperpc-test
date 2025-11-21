@@ -1,4 +1,4 @@
-import { ProductsGridContainer } from "@/widgets/Posts/ProductsGridContainer";
+import { ProductsGridContainer } from "@/widgets/Products";
 
 const Home = () => {
     return (

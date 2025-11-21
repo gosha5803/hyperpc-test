@@ -1,3 +1,3 @@
-export { ProductCard } from "./ProductCard";
-export { ProductSkeleton } from "./ProductSkeleton";
-export { ProductsGrid } from "./ProductsGrid";
+export { ProductCard } from "../ui/ProductCard";
+export { ProductSkeleton } from "../ui/ProductSkeleton";
+export { ProductsGrid } from "../ui/ProductsGrid";
